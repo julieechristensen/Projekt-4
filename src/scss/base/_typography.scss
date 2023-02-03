@@ -1,0 +1,50 @@
+
+body {
+    font-family: var (--font-sans);
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-serif);
+
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3{
+
+}
+
+h4{
+
+}
+
+h5{
+
+}
+
+h6 {
+
+}
+
+p { 
+    line-height: var (--line-height);
+}
+
+a {
+
+    line-height: var(--line-height);
+    color: var(--color-dark);
+    text-decoration: none;
+    &:hover {
+        color: var (--color-accent);
+    }
+}
+
+li {
+    line-height: var (--line-height);
+}
