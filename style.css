@@ -110,6 +110,91 @@ li {
   line-height: var --line-height;
 }
 
+.site-header {
+  position: fixed;
+  z-index: 999;
+  height: 100px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 32px;
+}
+.site-header__content {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-m);
+}
+.site-header__button {
+  background-color: transparent;
+  color: var(--color-accent);
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var --color-dark-300;
+  border-radius: 0;
+  font-size: var(--font-size-2);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: none;
+}
+.site-header__button:hover {
+  background-color: var(--color-accent);
+  color: var(--color-dark-300);
+}
+
+.menu-button {
+  height: 26px;
+  width: 26px;
+  position: relative;
+  background: none;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+}
+.menu-button:focus .menu-button__hamburger, .menu-button--close .menu-button__hamburger {
+  transition: transform 0.2s 0.2s;
+  transform: rotate(45deg) translate(-50%, -50%);
+}
+.menu-button:focus .menu-button__hamburger::before, .menu-button--close .menu-button__hamburger::before {
+  transition: top 0.2s, transform 0.2s 0.2;
+  transform: rotate(90deg);
+  top: 0;
+}
+.menu-button:focus .menu-button__hamburger::after, .menu-button--close .menu-button__hamburger::after {
+  transition: width 0.2s;
+  width: 0;
+}
+.menu-button__hamburger {
+  transform-origin: left top;
+  position: absolute;
+  height: 1px;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transition: transform 0.2s;
+  transform: translate(-50%, -50%) rotate(0);
+  background-color: var(--color-accent);
+}
+.menu-button__hamburger:before, .menu-button__hamburger:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -8px;
+  height: 1px;
+  width: 100%;
+  background-color: inherit;
+}
+.menu-button__hamburger::before {
+  transition: top 0.2s 0.2s, transform 0.2s;
+}
+.menu-button__hamburger:after {
+  top: 8px;
+  width: 70%;
+  transition: width 0.2s 0.2s;
+}
+
 .hero {
   min-height: 100vh;
   background: url(assets/images/back.jpg) no-repeat;
