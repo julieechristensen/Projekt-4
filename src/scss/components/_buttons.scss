@@ -1,7 +1,9 @@
-@mixin default ($background: transparent, $color: var(--color-accent), 
+@mixin default (
+$background: transparent, 
+$color: var(--color-accent), 
 $hover-background: var(--color-accent), 
 $hover-color: var(--color-dark-300), 
-$border-color: var ( --color-dark-300) 
+$border-color: var (--color-dark-300) 
  ) {
     background-color: $background;
     color: $color;

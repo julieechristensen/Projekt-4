@@ -44,7 +44,7 @@
   --font-size-5: calc( var(--font-size-4) * var(--font-scale));
   --font-size-6: calc( var(--font-size-5) * var(--font-scale));
   --page-width: 72rem;
-  --grid-container:[full-start] minmax (32px, 1fr) [inner-start] minmax (0, var(--page-width)) [inner-end] minmax (32px, 1fr) [full-end];
+  --grid-container:[full-start] minmax(32px, 1fr) [inner-start] minmax(0, var(--page-width)) [inner-end] minmax(32px, 1fr) [full-end];
 }
 
 * {
@@ -67,6 +67,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-serif);
+  color: var(--color-dark);
+  font-weight: 500;
 }
 
 h1 {
@@ -239,6 +241,95 @@ li {
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
   margin: 1.5rem auto;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: var(--grid-container);
+  padding: var(--section-gap) 0;
+}
+.about__inner {
+  grid-column: inner;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-l);
+  padding: 0 var(--gap-l);
+  align-items: center;
+}
+.about__image {
+  margin: 0;
+  position: relative;
+}
+.about__image img {
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+.about__image .black-box {
+  right: calc(var(--gap-l) * -1);
+  bottom: calc(var(--gap-l) * -1);
+}
+.about__title {
+  margin-top: 0;
+}
+.about__title:after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 64px;
+  background-color: var(--color-accent);
+  margin-top: var(--gap-m);
+  margin-bottom: var(--gap-m);
+}
+.about__excerpt {
+  color: var(--color-dark-600);
+}
+.about__excerpt p {
+  margin: 0;
+}
+.about__excerpt p + p {
+  margin-top: 1rem;
+}
+.about__footer {
+  margin-top: var(--gap-l);
+}
+.about__buttons {
+  display: flex;
+  gap: var(--gap-m);
+}
+.about__button {
+  background-color: transparent;
+  color: var(--color-dark);
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color-dark-900);
+  border-radius: 0;
+  font-size: var(--font-size-2);
+  font-family: var(--font-serif);
+  font-weight: 400;
+  display: inline-block;
+  text-decoration: none;
+}
+.about__button:hover {
+  background-color: var --color-accent-800;
+  color: var(--color-dark-300);
+}
+
+.black-box {
+  position: relative;
+  background-color: var(--color-dark);
+  width: 333px;
+  height: 333px;
+  position: absolute;
+}
+.black-box::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--color-accent);
+  top: 12px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  opacity: 0.34;
 }
 
 /*# sourceMappingURL=style.css.map */
