@@ -1,0 +1,11 @@
+.contact {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    padding: var(--section-gap) 0;
+
+    &__inner{
+        grid-column: inner;
+        min-height: 300px;
+
+    }
+}

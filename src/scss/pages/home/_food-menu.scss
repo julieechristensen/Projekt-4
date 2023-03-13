@@ -6,7 +6,7 @@
     background-color: var(--color-accent-800);
     display: grid;
     grid-template-columns: var(--grid-container);
-    padding: var(--section-gap)0;
+    padding: var(--section-gap)0 calc(var(--section-gap)*2 );
 
     &__inner { 
         @include details.frame($color:var(--color-dark)); 
@@ -16,7 +16,7 @@
         padding: var(--section-gap) 2rem;
     }
 
-    
+
     &__content {
        
         position: relative;

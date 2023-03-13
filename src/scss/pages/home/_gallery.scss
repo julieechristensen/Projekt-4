@@ -1,0 +1,35 @@
+@use '../../components/details' ;
+
+.gallery {
+    display: grid;
+    grid-template-columns: var(--grid-container);
+    transform: calc( var(--section-gap)* -1 ) ;
+
+
+    &__inner {
+        margin-top: calc( var(--section-gap)* -1 ) ;
+        grid-column: inner;
+        display: flex;
+        gap: var(--gap-l);
+    }
+
+    &__item {
+        aspect-ratio: 1/1;
+        @include details.frame;
+
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    figure {
+        margin: 0;
+
+    }
+
+    img {
+        display: block;
+    }
+}
