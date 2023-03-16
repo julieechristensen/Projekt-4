@@ -50,11 +50,8 @@
 
     &__course{
         margin: var(--gap-m) 0 ;
-        &::after {
-            content: url('assets/icons/icon-divider.svg');
-            display: block; 
-            margin-top: var(--gap-s);
-        }
+        @include details.separator-dots;
+        
     }
 
     &__footer{
