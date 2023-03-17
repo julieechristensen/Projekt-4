@@ -1,5 +1,6 @@
 @use '../../components/details';
 @use '../../components/buttons' as button;
+@use '../../ultilities/responsive';
 
 .food-menu {
     
@@ -49,6 +50,11 @@
     }
 
     &__course{
+        @include responsive.max(30rem){
+        --gap-s:0rem;
+        --gap-m:1rem;
+        }
+
         margin: var(--gap-m) 0 ;
         @include details.separator-dots;
         

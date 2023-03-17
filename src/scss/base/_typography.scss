@@ -1,4 +1,6 @@
 
+@use '../ultilities/responsive';
+
 body {
     font-family: var (--font-sans);
     font: var(--font-size-2);
@@ -16,6 +18,10 @@ h1 {
 
 h2 {
     font-size: var(--font-size-5);
+
+    @include responsive.max(30rem){
+        font-size: var(--font-size-4);
+    }
 }
 
 h3{

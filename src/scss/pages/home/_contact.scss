@@ -1,4 +1,5 @@
 @use '../../components/details';
+@use '../../ultilities/responsive';
 
 .contact {
     display: grid;
@@ -10,6 +11,11 @@
         display: flex;
         justify-content: space-between;
         gap: var(--gap-l);
+       
+        @include responsive.max(64rem) {
+            flex-direction: column;
+        
+        }
         
 
     }
@@ -42,6 +48,12 @@
         }
     }
 
+    @include responsive.max(64rem) {
+
+        flex: 1;
+        max-width: 100%;
+    }
+
 }
 
 .contact-form {
@@ -55,6 +67,9 @@
     }
 
     input, textarea {
+        @include responsive.max(40rem) {
+            --gap-m:1rem;
+        }
         margin-bottom: var(--gap-m);
     }
 
@@ -66,4 +81,27 @@
         display: flex;
         gap: var(--gap-l);
     }
+    @include responsive.max(64rem) {
+        flex: 1;
+        width: 100%;
+        padding-right: var(--gap-l);
+
+    }
+
+    @include responsive.max(40rem) {
+        padding-left: var(--gap-m);
+        padding-right: var(--gap-m);
+
+        &__row{
+            gap: var(--gap-s);
+        }
+    }
+
+    @include responsive.max(30rem) {
+        &__row{
+            display:block ;
+
+        }
+    }
+
 }
