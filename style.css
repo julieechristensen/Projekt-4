@@ -13,7 +13,7 @@
   --color-dark-600:hsl(0, 0%, 47%);
   --color-dark-700:hsl(0, 0%, 57%);
   --color-dark-800:hsl(0, 0%, 67%);
-  --color-dark-900:hsl(0, 0%, 77%);
+  --color-dark-900:hsl(0, 0%, 94%);
   --color-accent: hsl(42, 42%, 75%);
   --color-accent-200: hsl(42, 42%, 78%);
   --color-accent-300: hsl(42, 42%, 81%);
@@ -67,7 +67,7 @@ img {
 input[type=text], input[type=number], input[type=datetime-local], input[type=email], input[type=tel], button[type=text], button[type=number], button[type=datetime-local], button[type=email], button[type=tel] {
   max-width: 100%;
   width: 100%;
-  border: 1px solid var(--color-dark-900);
+  border: 1px solid var(--color-dark-1000);
   background-color: var(--color-accent-900);
   padding: 0.5rem 1rem;
   font-size: var(--font-size-2);
@@ -102,7 +102,7 @@ input[type=submit]:hover, button[type=submit]:hover {
 }
 
 textarea {
-  border: 1px solid var(--color-dark-900);
+  border: 1px solid var(--color-dark-1000);
   background-color: var(--color-accent-900);
   padding: 0.5rem 1rem;
   font-size: var(--font-size-2);
@@ -190,7 +190,7 @@ li {
   background-color: transparent;
   color: var(--color-accent);
   padding: 0.5rem 1.5rem;
-  border: 1px solid var --color-dark-300;
+  border: 1px solid var(--color-accent);
   border-radius: 0;
   font-size: var(--font-size-2);
   font-family: var(--font-serif);
